@@ -1,0 +1,158 @@
+<script setup>
+
+</script>
+
+<template>
+  <div>
+    <div class="pestana_cabecera_home">
+        <div class="leyenda_sucursales">
+            <div>
+                <div class="color_leyenda_sucursales"></div>
+                <span class="etiqueta_sucursal"></span>
+            </div>
+            <div>
+                <div class="color_leyenda_sucursales"></div>
+                <span class="etiqueta_sucursal"></span>
+            </div>
+            <div>
+                <div class="color_leyenda_sucursales"></div>
+                <span class="etiqueta_sucursal"></span>
+            </div>
+            <div>
+                <div class="color_leyenda_sucursales"></div>
+                <span class="etiqueta_sucursal"></span>
+            </div>
+            <div>
+                <div class="color_leyenda_sucursales"></div>
+                <span class="etiqueta_sucursal"></span>
+            </div>
+        </div>
+        <div class="pestana-home">
+            <div>
+                <h4>Ventas del mes
+                    <div class="tooltip_ayuda">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="tooltiptext_ayuda">Este gráfico muestra las ventas cumuladas del presente mes por sucursal.</span>
+                    </div>
+                </h4>
+                <section id="contenedor_avance_mes_sucursal">
+                    <canvas id="avance-mes-sucursal" class="gradico_resumen"></canvas>
+                </section>
+            </div>
+            <div>
+                <h4>Ventas de hoy
+                    <div class="tooltip_ayuda">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="tooltiptext_ayuda">Este gráfico muestra las ventas cumuladas del presente día por sucursal.</span>
+                    </div>
+                </h4>
+                <section id="contenedor_numero_mes_sucursal">
+                    <canvas id="numero-ventas-sucursal" class="gradico_resumen"></canvas>
+                </section>
+            </div>
+            <div>
+                <h4>Unidades devueltas
+                    <div class="tooltip_ayuda">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="tooltiptext_ayuda">Este gráfico muestra las unidades de venta devueltas en el presente mes por sucursal.</span>
+                    </div>
+                </h4>
+                <section id="contenedor_devolucion_mes_sucursal">
+                    <canvas id="devolucion-ventas-sucursal" class="gradico_resumen"></canvas>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="pestana_home">
+        <div class="grafico_interno">
+            <div class="titulo_graficos_dos">
+                <div><h3>Ventas Mensuales
+                    <div class="tooltip_ayuda">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="tooltiptext_ayuda">Este gráfico muestra el avance del total de ventas y costos en meses.</span>
+                    </div>
+                </h3></div>
+                <div>Mayor venta <span style="display: flex; gap: 5px;"><p id="mayor_venta" style="font-weight: bold;"></p><span class="material-symbols-outlined" style="color: var(--boton-tres);">expand_less</span></span><p class="mes_max" style="font-size: 10px;color: #9b9b9b;"></p></div>
+                <div>Menor venta <span style="display: flex; gap: 5px;"><p id="menor_venta" style="font-weight: bold;"></p><span class="material-symbols-outlined" style="color: var(--boton-dos);">expand_more</span></span><p class="mes_min" style="font-size: 10px;color: #9b9b9b;"></p></div>
+                <div>Venta promedio <span style="display: flex; gap: 5px;"><p id="promedio_venta" style="font-weight: bold;"></p><span class="material-symbols-outlined" style="color: var(--boton-uno);">vital_signs</span></span></div>
+            </div>
+            <div class="grafico_compras">
+                <section id="contenedor_ventas_mensuales">
+                    <!-- <canvas id="ventas_mensuales" class="gradico_anual"></canvas> -->
+                </section>
+            </div>
+        </div>
+        <div id="compra-mensual" class="grafico_interno_dos">
+            <div class="titulo_graficos">
+                <h3>Ventas y margen</h3>
+                <h3>Gastos acumulados</h3>
+            </div>  
+            <div class="contenedor_circulo_sucursal_multi">
+                <div>
+                    <section id="contenedor_circulo_ventas" style="display: flex; height: 150px;">
+                        <!-- <canvas id="grafico_circulo_ventas"></canvas> -->
+                    </section>
+                    <section id="contenedor_circulo_margen" style="display: flex; height: 150px;">
+                        <!-- <canvas id="grafico_circulo_margen"></canvas> -->
+                    </section>
+                </div>
+                <div style="display: flex;">
+                    <section id="contenedor_circulo_gastos">
+                        <!-- <canvas id="grafico_circulo_gastos"></canvas> -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pestana_home">
+        <div class="grafico_interno">
+            <div class="titulo_graficos">
+                <h3>Ventas por Sucursal
+                    <div class="tooltip_ayuda">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="tooltiptext_ayuda">Este gráfico muestra el avance de ventas del presente año por sucursal por mes.</span>
+                    </div>
+                </h3>
+            </div>  
+            <div style="display: flex; gap: 11px; align-content: center;">
+                <section class="contenedor_margen_sucursal_dos" style="width: 100px; height: 40px;">
+                    <!-- <canvas class="margen_sucursal_dos"></canvas> -->
+                </section>
+                <section class="contenedor_margen_sucursal_dos" style="width: 100px; height: 40px;">
+                    <!-- <canvas class="margen_sucursal_dos"></canvas> -->
+                </section>
+                <section class="contenedor_margen_sucursal_dos" style="width: 100px; height: 40px;">
+                    <!-- <canvas class="margen_sucursal_dos"></canvas> -->
+                </section>
+                <section class="contenedor_margen_sucursal_dos" style="width: 100px; height: 40px;">
+                    <!-- <canvas class="margen_sucursal_dos"></canvas> -->
+                </section>
+                <section class="contenedor_margen_sucursal_dos" style="width: 100px; height: 40px;">
+                    <!-- <canvas class="margen_sucursal_dos"></canvas> -->
+                </section>
+            </div>
+            <div class="grafico_compras">
+                <section id="contenedor_ventas_mensuales_sucursal">
+                    <!-- <canvas id="ventas_mensuales_sucursal" class="gradico_anual"></canvas> -->
+                </section>
+            </div>
+        </div>
+        <div class="grafico_interno_dos">
+            <div style="display: flex;justify-content: space-around;">
+                <h3>Ventas acumuladas por sucursal</h3>
+            </div>
+            <div class="contenedor_circulo_sucursal_multi">
+                <section id="contenedor_acumulado_ventas_costos" style="width: 450px; ">
+                    <!-- <canvas id="acumulado_ventas_costos" class="gradico_circular"></canvas> -->
+                </section>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.title{
+  color: rgb(0, 255, 170);
+}
+</style>

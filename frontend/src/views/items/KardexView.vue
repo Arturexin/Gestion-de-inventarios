@@ -1,0 +1,181 @@
+<script setup>
+
+</script>
+
+<template>
+  <div>
+    <div class="contenedor_compras">
+        <div>
+            <select name="fffff-sucursal" id="fffff-sucursal" class="input-select-ventas boton-cli">
+            </select>
+            <div class="contenedor_formulario_compras" id="form_contenedor"></div>
+            <div  class="boton-cli" id="button_contenedor"></div>
+        </div>
+
+        <div class="grafico_interno">
+            <div class="titulo_graficos_dos">
+                <h3>Movimiento de unidades</h3>
+            </div>  
+            <div id="contenedor_grafico_kardex" class="gradico_anual">
+            </div>
+        </div>
+    </div>        
+    
+    <div class="contenedor_kardex">
+        <table id="tabla-consolidado-kardex" class="tabla-proforma">
+            <thead>
+                <tr>
+                    <th scope="row" colspan="13">Kardex</th>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="3">Producto</th>
+                    <th scope="row" colspan="2">Entradas</th>
+                    <th scope="row" colspan="2">Salidas</th>
+                    <th scope="row" colspan="2">Transferencias</th>
+                    <th scope="row" colspan="2">Despacho</th>
+                    <th scope="row" colspan="2">Saldos</th>
+                </tr>
+                <tr>
+                    <th style="width: 100px;">Código</th>
+                    <th style="width: 200px;">Detalle</th>
+                    <th style="width: 70px;">Costo Unitario</th>
+                    <th style="width: 70px;">Cantidad</th>
+                    <th style="width: 100px;">Costo Total</th>
+                    <th style="width: 70px;">Cantidad</th>
+                    <th style="width: 100px;">Costo Total</th>
+                    <th style="width: 70px;">Cantidad</th>
+                    <th style="width: 100px;">Costo Total</th>
+                    <th style="width: 70px;">Cantidad</th>
+                    <th style="width: 100px;">Costo Total</th>
+                    <th style="width: 70px;">Cantidad</th>
+                    <th style="width: 100px;">Costo Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="13"><a id="reiniciar-tablas" class="myButtonEliminar">Reiniciar</a></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="contenedor_compras_principal">
+        <div>
+            <h2 style="text-align: center;">Lista de Entradas</h2>
+            <div class="contenedor-codigo-barras_dos">
+                <table id="tabla-detalle-movimientos-entradas" class="tabla-proforma">
+                    <caption class="invisible">Lista de Entradas</caption>
+                    <thead class="elemento_estatico_superior_dos">
+                        <tr>
+                            <th style="width: 120px;">Comprobante</th>
+                            <th style="width: 70px;">Cantidad Entrada</th>
+                            <th style="width: 100px;">Importe Entrada</th>
+                            <th style="width: 70px;">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot class="elemento_estatico_inferior_dos">
+                      <tr>
+
+                        <th>Total</th>
+                        <th id="total-existencias-detalle-entradas"></th>
+                        <th id="total-importe-detalle-entradas"></th>
+                        <th></th>
+                      </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div>
+            <h2 style="text-align: center;">Lista de Salidas</h2>
+            <div class="contenedor-codigo-barras_dos">
+                <table id="tabla-detalle-movimientos-salidas" class="tabla-proforma">
+                    <caption class="invisible">Lista de Salidas</caption>
+                    <thead class="elemento_estatico_superior_dos">
+                        <tr>
+                            <th style="width: 120px;">Comprobante</th>
+                            <th style="width: 70px;">Cantidad Salidas</th>
+                            <th style="width: 100px;">Importe Salidas</th>
+                            <th style="width: 70px;">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot class="elemento_estatico_inferior_dos">
+                      <tr>
+
+                        <th>Total</th>
+                        <th id="total-existencias-detalle-salidas"></th>
+                        <th id="total-importe-detalle-salidas"></th>
+                        <th></th>
+                      </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div>
+            <h2 style="text-align: center;">Lista de Transferencias</h2>
+            <div class="contenedor-codigo-barras_dos">
+                <table id="tabla-detalle-movimientos-transferencias" class="tabla-proforma">
+                    <caption class="invisible">Lista de Transferencias</caption>
+                    <thead class="elemento_estatico_superior_dos">
+                        <tr>
+                            <th style="width: 120px;">Comprobante</th>
+                            <th style="width: 70px;">Cantidad Transferencias</th>
+                            <th style="width: 100px;">Importe Transferencias</th>
+                            <th style="width: 70px;">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot class="elemento_estatico_inferior_dos">
+                      <tr>
+
+                        <th>Total</th>
+                        <th id="total-existencias-detalle-transferencias"></th>
+                        <th id="total-importe-detalle-transferencias"></th>
+                        <th></th>
+                      </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div>
+            <h2 style="text-align: center;">Lista de Despacho</h2>
+            <div class="contenedor-codigo-barras_dos">
+                <table id="tabla-detalle-movimientos-perdidas" class="tabla-proforma">
+                    <caption class="invisible">Lista de Despacho</caption>
+                    <thead class="elemento_estatico_superior_dos">
+                        <tr>
+                            <th style="width: 120px;">Comprobante</th>
+                            <th style="width: 70px;">Cantidad Despacho</th>
+                            <th style="width: 100px;">Importe Despacho</th>
+                            <th style="width: 70px;">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot class="elemento_estatico_inferior_dos">
+                      <tr>
+
+                        <th>Total</th>
+                        <th id="total-existencias-detalle-perdidas"></th>
+                        <th id="total-importe-detalle-perdidas"></th>
+                        <th></th>
+                      </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.title{
+  color: rgb(25, 0, 255);
+}
+</style>

@@ -1,0 +1,205 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --fondo-primero : rgb(27 30 32);
+  --fondo-segundo : #2F2F2F;
+  --fondo-tercero : #31383f;
+  --fondo-cuarto : #5b6774;
+  --fondo-quinto : rgb(20 19 19 / 90%);
+  --color-secundario : #eee;
+  --boton-uno : #599bb3;
+  --boton-dos : #B3675A;
+  --boton-tres : #6abb6b;
+  --boton-cuatro : hsl(68, 7%, 23%);
+
+  --side_cero : rgb(144, 238, 144);
+  --side_uno : rgb(222, 184, 135);
+  --side_dos : rgb(135, 206, 250);
+  --side_tres : rgb(186, 85, 211);
+  --side_cuatro : rgb(211, 211, 211);
+
+  --suc-uno : rgb(230, 202, 123, 0.5);
+  --suc-dos : rgb(145, 230, 156, 0.5);
+  --suc-tres : rgb(99, 128, 230, 0.5);
+  --suc-cuatro : rgb(230, 110, 141, 0.5);
+  --suc-cinco : rgb(77, 77, 77, 0.5);
+
+  --suc-b-uno : rgb(230, 202, 123);
+  --suc-b-dos : rgb(145, 230, 156);
+  --suc-b-tres : rgb(99, 128, 230);
+  --suc-b-cuatro : rgb(230, 110, 141);
+  --suc-b-cinco : rgb(77, 77, 77);
+
+  --border-principal : #ccc;
+
+  --fondo_modal : #111111bd;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.inv {
+    display: none;
+}
+
+.input-general{
+  width: 200px;
+  padding: 5px;
+  border: 1px solid var(--border-principal);
+}
+.input-numero{
+  width: 80px;
+  padding: 5px;
+  border: 1px solid var(--border-principal);
+  text-align: right;
+}
+.input-general-dos{
+  width: 250px;
+  padding: 5px;
+  border: 1px solid var(--border-principal);
+}
+.fondo-input{
+  background: var(--fondo-quinto);
+}
+.label-general{
+  display: flex;
+  gap: 1em;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+
+/* /////////////////////////////// */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--fondo-quinto);
+  color: var(--color-principal);
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Posición del tooltip */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* Nueva version */
+.tooltip_index {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip_index .tooltiptext_index {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--fondo-quinto);
+  color: var(--color-principal);
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 0;
+  bottom: 0%; /* Posición del tooltip */
+  left: 350%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip_index:hover .tooltiptext_index {
+  visibility: visible;
+  opacity: 1;
+}
+/* Estilo mensaje de ayuda */
+.tooltip_ayuda {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  font-size: 12px;
+  color: #eeeeee61;
+}
+
+.tooltip_ayuda .tooltiptext_ayuda {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--fondo-quinto);
+  color: var(--color-principal);
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Posición del tooltip */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip_ayuda:hover .tooltiptext_ayuda {
+  visibility: visible;
+  opacity: 1;
+}
+
+.input-select-ventas {
+  width: 260px;
+  border: 2px solid var(--border-principal);
+  padding: 3px;
+  background-color: var(--fondo-primero);
+  color: var(--color-secundario);
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.input-filtro {
+  width: 94px;
+  padding: 4px;
+  border: none;
+}
+/* /////////////////////////////////////////// */
+.contenedor_botones_ventas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 1080px;
+  padding: 10px;
+  background: var(--fondo-primero);
+}
+.contenedor-formularios{
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+.contenedor-formularios-into{
+  display: flex;
+  min-width: 1100px;
+  height: 500px;
+  background: var(--fondo-primero);
+}

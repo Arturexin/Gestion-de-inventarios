@@ -1,0 +1,160 @@
+.btnUno {
+	background:linear-gradient(to bottom, var(--boton-uno) 5%, var(--boton-uno) 100%);
+	background-color:var(--boton-uno);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	padding:7px 19px;
+	text-decoration:none;
+	border: none;
+	user-select: none;
+}
+.btnUno:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+
+.btnUnoB {
+	
+	background:linear-gradient(to bottom, var(--boton-uno) 5%, var(--boton-uno) 100%);
+	background-color:var(--boton-uno);
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 5px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnUnoB:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+
+.btnDos {
+	background:linear-gradient(to bottom, var(--boton-dos) 5%, var(--boton-dos) 100%);
+	background-color:var(--boton-dos);
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	padding:7px 19px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnDos:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+.btnDosB {
+	background:linear-gradient(to bottom, var(--boton-dos) 5%, var(--boton-dos) 100%);
+	background-color:var(--boton-dos);
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 5px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnDosB:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+.btnTres {
+	
+	background:linear-gradient(to bottom, var(--boton-tres) 5%, var(--boton-tres) 100%);
+	background-color:var(--boton-tres);
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnTres:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+.btnTresB {
+	
+	background:linear-gradient(to bottom, var(--boton-tres) 5%, var(--boton-tres) 100%);
+	background-color:var(--boton-tres);
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 5px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnTresB:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+.btnCuatro {
+	
+	background:linear-gradient(to bottom, var(--boton-cuatro) 5%, var(--boton-cuatro) 100%);
+	background-color:var(--boton-cuatro);
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	padding:7px 19px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnCuatro:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+.btnCuatroB {
+	
+	background:linear-gradient(to bottom, var(--boton-cuatro) 5%, var(--boton-cuatro) 100%);
+	background-color:var(--boton-cuatro);
+  	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-secundario);
+	font-family:'Open Sans', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 5px;
+	text-decoration:none;
+	user-select: none;
+}
+.btnCuatroB:active {
+	position:relative;
+	top:1px;
+	color: var(--color-secundario);
+}
+

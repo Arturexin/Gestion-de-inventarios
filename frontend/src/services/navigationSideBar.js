@@ -1,0 +1,17 @@
+export const navigationSideBar = [
+    {id: 0, titulo: 'Inicio', path: '/inicio', archivo: 'InicioView', nombre: 'inicio-item', icon: 'home', color: '--side_cero'},
+    {id: 1, titulo: 'Ventas', path: '/ventas', archivo: 'VentasView', nombre: 'ventas-item', icon: 'sell', color: '--side_cero'},
+    {id: 2, titulo: 'Compras', path: '/compras', archivo: 'ComprasView', nombre: 'compras-item', icon: 'shopping_cart', color: '--side_uno'},
+    {id: 3, titulo: 'Transferencias', path: '/transferencias', archivo: 'TransferenciasView', nombre: 'transferencias-item', icon: 'move_up', color: '--side_uno'},
+    {id: 4, titulo: 'Despachos', path: '/despachos', archivo: 'DespachosView', nombre: 'despachos-item', icon: 'money_off', color: '--side_uno'},
+    {id: 5, titulo: 'Modificaciones', path: '/modificaciones', archivo: 'ModificacionesView', nombre: 'modificaciones-item', icon: 'contract_edit', color: '--side_uno'},
+    {id: 6, titulo: 'Kardex', path: '/kardex', archivo: 'KardexView', nombre: 'kardex-item', icon: 'sync_alt', color: '--side_dos'},
+    {id: 7, titulo: 'Detalle', path: '/detalle', archivo: 'DetalleView', nombre: 'detalle-item', icon: 'storefront', color: '--side_dos'},
+    {id: 8, titulo: 'Devoluciones', path: '/devoluciones', archivo: 'DevolucionesView', nombre: 'devoluciones-item', icon: 'switch_right', color: '--side_dos'},
+    {id: 9, titulo: 'Analisis', path: '/analisis', archivo: 'AnalisisView', nombre: 'analisis-item', icon: 'monitoring', color: '--side_dos'},
+    {id: 10, titulo: 'Inventario', path: '/inventario', archivo: 'InventarioView', nombre: 'inventario-item', icon: 'storage', color: '--side_tres'},
+    {id: 11, titulo: 'Entradas', path: '/entradas', archivo: 'EntradasView', nombre: 'entradas-item', icon: 'left_panel_close', color: '--side_tres'},
+    {id: 12, titulo: 'Salidas', path: '/salidas', archivo: 'SalidasView', nombre: 'salidas-item', icon: 'left_panel_open', color: '--side_tres'},
+    {id: 13, titulo: 'Clientes', path: '/clientes', archivo: 'ClientesView', nombre: 'clientes-item', icon: 'groups', color: '--side_tres'},
+    {id: 14, titulo: 'Configuración', path: '/configuracion', archivo: 'ConfiguracionView', nombre: 'configuracion-item', icon: 'settings', color: '--side_cuatro'},
+]

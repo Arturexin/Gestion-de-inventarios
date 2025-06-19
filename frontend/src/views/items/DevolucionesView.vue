@@ -1,0 +1,133 @@
+<script setup>
+
+</script>
+
+<template>
+  <div>
+    <div class="contenedor_compras">
+        <div class="contenedor_compras_dos">
+            <form>
+                <div class="into_form">
+                    <h2>Devoluciones
+                        <div class="tooltip_ayuda">
+                            <span class="material-symbols-outlined">help</span>
+                            <span class="tooltiptext_ayuda">Devuelve unidades de productos que entraron a su respectivo proveedor.</span>
+                        </div>
+                    </h2>
+                    <select name="" id="tipo_devolucion" class="input-select-ventas">
+                        <option value="0" selected>Seleccione la operación</option>
+                        <option value="1">Ventas</option>
+                        <option value="2">Compras</option>
+                        <option value="3">Recompras</option>
+                    </select>
+                    <div>
+                        <label style="display: flex;">
+                            <p id="t_op"></p>
+                            <input id="buscador_operacion" class="input-general-importante fondo-importante" type="text" placeholder="Ingresar el número de operación">
+                            <div class="tooltip_ayuda">
+                                <span class="material-symbols-outlined">find_in_page</span>
+                                <span class="tooltiptext_ayuda">Digite caracteres clave de la operación a buscar.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="boton-cli">
+                        <button id="mandar-tabla-devoluciones" href="#" class="myButtonAgregar">Agregar Devoluciones</button>
+                        <input type="reset" class="myButtonEliminar">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="titulo_graficos"><p>Devoluciones por Entradas</p></div>  
+            <div id="contenedor_grafico_devoluciones" class="gradico_anual">
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-pre-recompra">
+        <table id="tabla_modal" class="tabla_modal contenido-tabla">
+            <thead>
+                <tr>
+                    <th scope="row" colspan="8"><h2>Proforma</h2></th>
+                </tr>
+                <tr>
+                    <th style="width: 120px;">Sucursal</th>
+                    <th style="width: 120px;">Código</th>
+                    <th style="width: 70px;">Cantidad Comprada</th>
+                    <th style="width: 70px;">Cantidad a Devolver</th>
+                    <th style="width: 100px;">Comprobante</th>
+                    <th style="width: 70px;">Devolución Anterior</th>
+                    <th style="width: 70px;">Saldo de la Compra</th>
+                    <th>
+                        <span style="font-size:18px;" class="material-symbols-outlined">delete</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="8">
+                        <select id="causa_devolucion" class="fondo-importante input-compras">
+                            <option value="0" selected="">-- Causa de devolución --</option>
+                            <option value = "1">Producto defectuoso</option>
+                            <option value = "2">Producto dañado durante el envío</option>
+                            <option value = "3">Producto incorrecto o equivocado</option>
+                            <option value = "4">Talla o ajuste incorrecto</option>
+                            <option value = "5">Insatisfacción con el producto</option>
+                            <option value = "6">Cambio por otro producto</option>
+                            <option value = "7">Cancelación del pedido</option>
+                            <option value = "8">Entrega retrasada</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="8">
+                        <button id="procesar-devolucion-compras" class="myButtonAgregar">Mandar a Tabla</button>
+                        <button id="remover-tabla-devoluciones-compras-uno" class="eliminarTablaFila">Cancelar</button>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="contenedor_tabla">
+        <table id="tabla_principal" class="tabla-proforma">
+            <thead>
+                <tr>
+                    <th scope="row" colspan="8"><h2>Lista de devoluciones</h2></th>
+                </tr>
+                <tr>
+                    <th>Sucursal</th>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Cantidad Comprada</th>
+                    <th>Cantidad a Devolver</th>
+                    <th>Comprobante</th>
+                    <th>Causa de Devolución</th>
+                    <th style="width: 100%;" id="remover-tabla-devoluciones-compras-dos" class="eliminarTablaFila">
+                        <div class="tooltip">
+                            <span style="font-size:18px;" class="material-symbols-outlined">delete</span>
+                            <span class="tooltiptext">Descartar</span>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+              <tr>
+
+                <th scope="row" colspan="8">
+                  <button id="procesar-devolucion-compras-final" class="myButtonProcesar">Procesar Devolución</button>
+                </th>
+              </tr>
+            </tfoot>
+        </table>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.title{
+  color: rgb(25, 0, 255);
+}
+</style>
