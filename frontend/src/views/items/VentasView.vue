@@ -9,6 +9,8 @@
     import FormCli from '../../components/forms/FormCli.vue';
     import FormBusSimple from '../../components/forms/FormBusSimple.vue';
     import { generarFecha, enviarDatos } from '../../services/functionFetch.js';
+    import TablaUno from '../../components/tables/TablaUno.vue';
+  
 
 
     const dbStore = useDataBases();
@@ -154,6 +156,13 @@
     function usar(dato){
         dbStore.v_.cod_ventas = dato.codigo;
     }
+    const columns = [
+        { label: 'Nombre', value: 'nombre', style: { width: '200px', fontSize: '14px', textAlign: 'left' }, filter: true },
+        { label: 'Precio', value: 'precio', style: { width: '50px', fontSize: '14px', textAlign: 'right' }, filter: true },
+        { label: 'Stock', value: 'stock', style: { width: '50px', fontSize: '14px', textAlign: 'right' }, filter: true },
+        // { label: 'Uno', button: true, method: mensajeAlerta, style: { width: '50px', fontSize: '14px', textAlign: 'center' } },
+        // { label: 'Dos', button: true, method: mensajeAlertaDos, style: { width: '50px', fontSize: '14px', textAlign: 'center' } }
+    ];
 </script>
 
 <template>
@@ -179,8 +188,20 @@
                     <form-ventas />
                 </div>
                 <div>
-                    <tab-venta 
+                    <!-- <tab-venta 
                         :function_click="procesamientoVentas"
+                    /> -->
+                    <tabla-uno
+                        title="Buscar cliente por DNI"
+                        :columns="[
+                            { name: 'id_cli', label: 'ID', field: 'id_cli' },
+                            { name: 'nombre_cli', label: 'Nombre', field: 'nombre_cli' },
+                            { name: 'dni_cli', label: 'DNI', field: 'dni_cli' },
+                        ]"
+                        :rows="dbStore.db_clientes"
+                        v-model:selectedRows="clienteSeleccionado"
+                        @selection-change="(rows) => clienteSeleccionado = rows[0]"
+                        :select="true"
                     />
                 </div>
             </div>
@@ -203,6 +224,7 @@
         <div :class="{ modal: true, 'modal-show': modalStore.showModalMsj.state }">
             <dial-mo-mensajes />
         </div>
+        
     </div>
 </template>
 

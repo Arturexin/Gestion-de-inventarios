@@ -1,7 +1,12 @@
+const URL_API_almacen_central = (import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:3000/api').replace(/\/$/, '');
 
-const URL_API_almacen_central = 'http://127.0.0.1:5000/api/'
+function construirUrl(ruta) {
+    const rutaNormalizada = String(ruta || '').replace(/^\//, '');
+    return `${URL_API_almacen_central}/${rutaNormalizada}`;
+}
+
 export async function cargarDatos(ruta){
-    let url = URL_API_almacen_central + ruta
+    let url = construirUrl(ruta)
     try{
         let respuesta  = await fetch(url, {
             "method": 'GET',
@@ -20,7 +25,7 @@ export async function cargarDatos(ruta){
     };
 };
 export async function enviarDatos(ruta, fila){
-    let url = URL_API_almacen_central + ruta
+    let url = construirUrl(ruta)
     try {
         let response = await fetch(url, {
             method: 'POST',

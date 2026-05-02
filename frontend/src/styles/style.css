@@ -44,6 +44,18 @@
   --border-principal : #ccc;
 
   --fondo_modal : #111111bd;
+
+
+  
+  --b-a-dark : #373b44;
+  --b-a-light : #dfe5eb;
+  --c-a-light : #eee;
+  --c-a-dark : #333;
+
+  --success-alert : #22c55e;
+  --error-alert : #ef4444;
+  --info-alert : #3b82f6;
+  --alert-alert : #f59e0b;
 }
 
 

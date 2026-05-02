@@ -4,9 +4,13 @@
   import SideBar from './components/SideBar.vue';
   import NavBar from './components/NavBar.vue';
   import { useDataBases } from './stores/dataBases';
+  import { useModalStore } from './stores/modalStore';
+  import Alerts from './components/alerts/Alerts.vue'
+  import ActionModal from './components/actionModal/ActionModal.vue';
 
   //states
   const dataBases = useDataBases();
+  const modalStore = useModalStore();
 
   onMounted(async () => {
     await dataBases.cargarProductosBuscar()
@@ -36,6 +40,29 @@
           <RouterView />
         </div>
       </div>
+    </div>
+    <div>
+        <Alerts v-if="modalStore.alerts" />
+        <ActionModal v-if="modalStore.actionModal"
+          title="Título del modal"
+          onButton="Aceptar"
+          offButton="Cancelar"
+          width="700px"> 
+          <table style="color: black;">
+            <tr>
+              <td>Nombre:</td>
+              <td>Juan Pérez</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>juan.perez@example.com</td>
+            </tr>
+            <tr>
+              <td>Teléfono:</td>
+              <td>+1 234 567 890</td>
+            </tr>
+          </table>
+        </ActionModal>
     </div>
   </div>
 </template>

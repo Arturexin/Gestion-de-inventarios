@@ -2,6 +2,20 @@ import { defineStore } from "pinia";
 
 export const useModalStore = defineStore('modal', {
     state: () => ({
+        alerts: false,
+        alertData: {
+            type: 'success',
+            title: '',
+            description: '',
+            width: '400px',
+            nameButton: 'Aceptar',
+        },
+        actionModal: false,
+        actionModalData: {
+            onConfirm: null,
+            description: '',
+        },
+
         showModalA: false,
         showModalB: false,
         showModalC: false,
@@ -53,6 +67,32 @@ export const useModalStore = defineStore('modal', {
                 opt_1: false,
                 opt_2: false,
             });
+        },
+        createAlert (type, title, description, nameButton = 'Aceptar', width = '400px') {
+            this.alertData = { type, title, description, nameButton, width };
+            this.alerts = true;
+        },
+        closeAlert () {
+            this.alerts = false;
+            this.alertData = {
+                type: 'success',
+                title: '',
+                description: '',
+                width: '400px',
+                nameButton: 'Aceptar',
+            };
+        },
+        createActionModal (onConfirm = null, description = '') {
+            this.actionModalData = { onConfirm, description };
+            this.actionModal = true;
+        },
+        closeActionModal () {
+            this.actionModal = false;
+            this.actionModalData = {
+                onConfirm: null,
+                description: '',
+            };
         }
+
     },
 });
